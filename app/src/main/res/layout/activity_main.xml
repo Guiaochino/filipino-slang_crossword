@@ -107,6 +107,7 @@
         android:onClick="onClickPlayGame"
         android:text="Play Game"
         android:textAllCaps="false"
+        app:backgroundTint="@null"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/txtAboutUS"
         app:layout_constraintEnd_toEndOf="parent"
@@ -120,6 +121,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:text="GAWA NG 3TECH - GOMEZ, JACULO, TIAMZON"
+        android:textColor="#666666"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
