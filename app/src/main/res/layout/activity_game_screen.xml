@@ -42,32 +42,416 @@
 
     </RelativeLayout>
 
-<!--
-    TODO: Identify whether Gridview or Gridlayout will be used
-          in creating the puzzle    
--->
     <GridView
         android:id="@+id/puzzle_container"
-        android:layout_width="match_parent"
-        android:layout_height="170pt"
-        app:layout_constraintTop_toBottomOf="@id/header_container" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/header_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/description_container"/>
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/description_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:background="#333333"
-        android:paddingHorizontal="20pt"
-        android:paddingVertical="5pt"
-        app:layout_constraintTop_toBottomOf="@id/puzzle_container">
+        android:background="#333"
+        android:text="description"
+        android:textColor="#dfdfdf"
+        android:textAlignment="center"
+        android:padding="10px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/keyboard_layout"/>
 
-        <TextView
-            android:id="@+id/word_description"
-            android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/keyboard_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:weightSum="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Desciption"
-            android:textSize="18sp"
-            android:textColor="#DFDFDF" />
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/q_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="Q"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/w_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="W"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/e_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="E"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/r_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="R"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/t_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="T"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/y_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="Y"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/u_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="U"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/i_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="I"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/o_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="o"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/p_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="P"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/a_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="A"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/s_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="S"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/d_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="D"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/f_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="F"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/g_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="G"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/h_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="H"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/j_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="J"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/k_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="K"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/l_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="L"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/z_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="Z"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/x_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="X"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/c_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="C"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/v_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="V"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/b_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="B"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/n_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="N"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/m_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="M"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/del_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#dfdfdf"
+                app:backgroundTint="@null"
+                android:minWidth="10pt"
+                android:minHeight="20pt"
+                android:text="DEL"
+                android:textColor="#333"
+                android:textSize="8pt" />
+
+
+        </LinearLayout>
 
     </LinearLayout>
 

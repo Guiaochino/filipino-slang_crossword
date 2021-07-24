@@ -59,15 +59,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        openExitPrompt();
+        finishAffinity();
     }
-
-    // For opening the Exit Prompt
-    public void openExitPrompt(){
-        Intent exitGame = new Intent(this, ExitPrompt.class);
-        startActivity(exitGame);
-    }
-
 
     // For opening the Game Screen
     public void openGameScreen(){

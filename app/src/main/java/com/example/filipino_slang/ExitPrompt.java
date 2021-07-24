@@ -26,14 +26,14 @@ public class ExitPrompt extends AppCompatActivity {
         btnExitGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finishAffinity();
+                openMenuScreen();
             }
         });
 
         btnReturnGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openMenuScreen();
+                openGameScreen();
             }
         });
     }
@@ -42,5 +42,11 @@ public class ExitPrompt extends AppCompatActivity {
     public void openMenuScreen(){
         Intent returnMenuScreen = new Intent(this, MainActivity.class);
         startActivity(returnMenuScreen);
+    }
+
+    // for opening Going Back to Game
+    public void openGameScreen(){
+        Intent returnGameScreen = new Intent(this, GameScreen.class);
+        startActivity(returnGameScreen);
     }
 }
